@@ -10,3 +10,7 @@ class PageWithColorField(Page):
 
 class PageWithCharColorField(Page):
     color = models.CharField(max_length=7)
+
+
+class PageWithDefaultValue(Page):
+    color = ColorField(default="#FF0000")

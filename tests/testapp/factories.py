@@ -12,3 +12,7 @@ class PageWithCharColorFieldPageFactory(wagtail_factories.PageFactory):
     class Meta:
         model = models.PageWithCharColorField
 
+
+class PageWithDefaultValuePageFactory(wagtail_factories.PageFactory):
+    class Meta:
+        model = models.PageWithDefaultValue

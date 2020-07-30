@@ -2,7 +2,10 @@ from django.test import TestCase
 from django.core.exceptions import ValidationError
 from wagtail.tests.utils import WagtailTestUtils
 
-from tests.testapp.factories import PageWithColorFieldPageFactory
+from tests.testapp.factories import (
+    PageWithColorFieldPageFactory,
+    PageWithDefaultValuePageFactory,
+)
 
 
 class FieldTest(TestCase, WagtailTestUtils):
@@ -22,4 +25,8 @@ class FieldTest(TestCase, WagtailTestUtils):
 
     def test_valid_value_are_saved_and_treated_as_a_string(self):
         page = PageWithColorFieldPageFactory.create(color="#FF0000")
+        self.assertEqual(page.color, "#FF0000")
+
+    def test_field_gets_default_value(self):
+        page = PageWithDefaultValuePageFactory.create()
         self.assertEqual(page.color, "#FF0000")
