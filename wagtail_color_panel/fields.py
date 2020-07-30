@@ -19,3 +19,7 @@ class ColorField(models.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 7)
         super().__init__(*args, **kwargs)
+
+    #def get_panel(self):
+    #    from wagtail_color_panel.edit_handlers import NativeColorPanel
+    #    return NativeColorPanel

@@ -2,10 +2,15 @@ from django.db import models
 from wagtail.core.models import Page
 
 from wagtail_color_panel.fields import ColorField
+from wagtail_color_panel.edit_handlers import NativeColorPanel
 
 
 class PageWithColorField(Page):
     color = ColorField()
+
+    content_panels = Page.content_panels + [
+        NativeColorPanel('color'),
+    ]
 
 
 class PageWithCharColorField(Page):
