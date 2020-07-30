@@ -1,3 +1,5 @@
+![Wagtail-Color-Panel](https://github.com/marteinn/wagtail-color-panel/workflows/Wagtail-Color-Panel/badge.svg)
+
 # Wagtail-Color-Panel
 
 Introduces a color field and panel to Wagtail.
