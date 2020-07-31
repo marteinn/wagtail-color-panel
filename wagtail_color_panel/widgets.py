@@ -3,7 +3,7 @@ from wagtail.admin.staticfiles import versioned_static
 
 
 class ColorInputWidget(widgets.Input):
-    input_type = 'color'
+    input_type = "color"
 
     def __init__(self, attrs=None):
         default_attrs = {"class": "color-input-widget"}
@@ -17,8 +17,10 @@ class ColorInputWidget(widgets.Input):
 
     @property
     def media(self):
-        return Media(css={
-            'all': [
-                versioned_static('wagtail_color_panel/css/color-input-widget.css'),
-            ]
-        })
+        return Media(
+            css={
+                "all": [
+                    versioned_static("wagtail_color_panel/css/color-input-widget.css"),
+                ]
+            }
+        )

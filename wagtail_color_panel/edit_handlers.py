@@ -8,4 +8,3 @@ class NativeColorPanel(FieldPanel):
         return {
             self.field_name: ColorInputWidget(),
         }
-

@@ -23,7 +23,7 @@ class PanelTest(TestCase, WagtailTestUtils):
         with self.assertRaises(ValidationError) as ctx:
             block.clean("Invalid")
 
-        self.assertTrue('Enter a valid color hash' in str(ctx.exception))
+        self.assertTrue("Enter a valid color hash" in str(ctx.exception))
 
     def test_color_block_supports_default_value(self):
         default_value = NativeColorBlock(default="#333333").get_default()

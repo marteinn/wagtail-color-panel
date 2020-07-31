@@ -1,5 +1,6 @@
 from django.test import TestCase
 from wagtail.tests.utils import WagtailTestUtils
+
 # from wagtail.admin.edit_handlers import get_form_for_model
 # from wagtail.admin.forms import WagtailAdminModelForm, WagtailAdminPageForm
 
@@ -26,4 +27,4 @@ class PanelTest(TestCase, WagtailTestUtils):
         self.assertEqual(color_panel.__class__, NativeColorPanel)
 
         color_widget = color_panel.widget_overrides()["color"]
-        self.assertEqual( color_widget.__class__, ColorInputWidget)
+        self.assertEqual(color_widget.__class__, ColorInputWidget)
