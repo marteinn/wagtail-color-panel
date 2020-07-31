@@ -1,8 +1,10 @@
 from django.db import models
 from wagtail.core.models import Page
+from wagtail.core.fields import StreamField
 
 from wagtail_color_panel.fields import ColorField
 from wagtail_color_panel.edit_handlers import NativeColorPanel
+from wagtail_color_panel.blocks import ColorBlock
 
 
 class PageWithColorField(Page):
@@ -19,3 +21,9 @@ class PageWithCharColorField(Page):
 
 class PageWithDefaultValue(Page):
     color = ColorField(default="#FF0000")
+
+
+class PageWithStreamfield(Page):
+    body = StreamField([
+        ('color', ColorBlock()),
+    ])

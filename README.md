@@ -7,11 +7,15 @@ Introduces a color field and panel to Wagtail.
 
 ## Features
 
-- Color panel that uses the HTML5 input color
-- A custom db field called ColorField
+- ColorPanel that can be used in your edit handler
+- ColorBlock for usage in a StreamField
+- Based on the native HTML5 color picker
+- A custom db field for easier conversion from hexadecimal colors to other formats (such as RGB)
 
 
 ## Examples
+
+### As a edit_handler
 
 ```python
 from wagtail.core.models import Page
@@ -26,6 +30,20 @@ class MyPage(Page):
     content_panels = Page.content_panels + [
         NativeColorPanel('color'),
     ]
+```
+
+
+### As a StreamField block
+
+```python
+from wagtail.core.models import Page
+from wagtail_color_panel.blocks import ColorBlock
+
+
+class PageWithStreamfield(Page):
+    body = StreamField([
+        ('color', ColorBlock()),
+    ])
 ```
 
 
