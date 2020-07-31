@@ -4,7 +4,7 @@ from wagtail.core.fields import StreamField
 
 from wagtail_color_panel.fields import ColorField
 from wagtail_color_panel.edit_handlers import NativeColorPanel
-from wagtail_color_panel.blocks import ColorBlock
+from wagtail_color_panel.blocks import NativeColorBlock
 
 
 class PageWithColorField(Page):
@@ -25,5 +25,5 @@ class PageWithDefaultValue(Page):
 
 class PageWithStreamfield(Page):
     body = StreamField([
-        ('color', ColorBlock()),
+        ('color', NativeColorBlock()),
     ])

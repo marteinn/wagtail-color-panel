@@ -6,7 +6,7 @@ from wagtail_color_panel.widgets import ColorInputWidget
 from wagtail_color_panel.validators import hex_triplet_validator
 
 
-class ColorBlock(FieldBlock):
+class NativeColorBlock(FieldBlock):
     def __init__(self, required=True, help_text=None, validators=(), **kwargs):
         self.field_options = {
             'required': required,
