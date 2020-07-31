@@ -2,7 +2,9 @@
 
 # Wagtail-Color-Panel
 
-Introduces a color field and panel to Wagtail.
+Introduces panels for selecting colors in Wagtail.
+
+![Screen1](https://raw.githubusercontent.com/marteinn/wagtail-color-panel/develop/img/img-in-streamfield.png)
 
 
 ## Features
@@ -10,7 +12,7 @@ Introduces a color field and panel to Wagtail.
 - NativeColorPanel that can be used in your edit handler
 - NativeColorBlock for usage in a StreamField
 - Based on the native HTML5 color picker
-- A custom db field for easier conversion from hexadecimal colors to other formats (such as RGB)
+- A custom db field for improved validation
 
 
 ## Examples
