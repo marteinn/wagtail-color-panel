@@ -15,9 +15,7 @@ Introduces panels for selecting colors in Wagtail.
 - A custom db field for improved validation
 
 
-## Examples
-
-### As a edit_handler
+## Example
 
 ```python
 from wagtail.core.models import Page
@@ -35,18 +33,11 @@ class MyPage(Page):
 ```
 
 
-### As a StreamField block
+## Documentation
 
-```python
-from wagtail.core.models import Page
-from wagtail_color_panel.blocks import NativeColorBlock
-
-
-class PageWithStreamfield(Page):
-    body = StreamField([
-        ('color', NativeColorBlock()),
-    ])
-```
+- [Getting started](./docs/1_getting_started.md)
+- [Adding panel to a Page](./docs/2_adding_to_a_page.md)
+- [Adding to a StreamField](./docs/3_adding_to_a_streamfield.md)
 
 
 ## Contributing
