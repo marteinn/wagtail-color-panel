@@ -24,3 +24,7 @@ class PanelTest(TestCase, WagtailTestUtils):
             block.clean("Invalid")
 
         self.assertTrue('Enter a valid color hash' in str(ctx.exception))
+
+    def test_color_block_supports_default_value(self):
+        default_value = ColorBlock(default="#333333").get_default()
+        self.assertEqual("#333333", default_value)
