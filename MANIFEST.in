@@ -1,0 +1,3 @@
+include README.md LICENSE runtests.py
+include wagtail_color_panel/static/wagtail_color_panel/css/color-input-widget.css
+prune img*
