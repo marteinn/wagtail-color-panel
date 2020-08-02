@@ -59,5 +59,3 @@ class MyPage(Page):
         NativeColorPanel('color'),
     ]
 ```
-
-

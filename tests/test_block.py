@@ -5,7 +5,7 @@ from wagtail.tests.utils import WagtailTestUtils
 from wagtail_color_panel.blocks import NativeColorBlock
 
 
-class PanelTest(TestCase, WagtailTestUtils):
+class BlockTest(TestCase, WagtailTestUtils):
     def test_color_block_render(self):
         block = NativeColorBlock()
         html = block.render("#333333")
