@@ -17,8 +17,8 @@ tests_require = ["pytest-django", "wagtail-factories", "pytest"]
 
 # Convert markdown to rst
 try:
-    from pypandoc import convert
-    long_description = convert("README.md", "rst")
+    from pypandoc import convert_file
+    long_description = convert_file("README.md", "rst")
 except:  # NOQA
     long_description = ""
 
