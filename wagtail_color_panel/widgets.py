@@ -49,7 +49,9 @@ class ColorInputWidget(widgets.TextInput):
     template_name = "wagtail_color_panel/widgets/color-input-widget.html"
 
     def __init__(self, attrs=None):
-        default_attrs = {"class": "color-input-widget"}
+        default_attrs = {
+            "class": "color-input-widget__text-input",
+        }
         attrs = attrs or {}
         attrs = {**default_attrs, **attrs}
         super().__init__(attrs=attrs)
