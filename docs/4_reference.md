@@ -23,7 +23,7 @@ class MyPage(Page):
 
 ### PolyfillColorPanel
 
-This panel uses the third party package [Spectrum](https://github.com/bgrins/spectrum) as a color selector, the mail purpose of this panel is to add IE11 support. You use it by adding it to your page `content_panels`.
+This panel uses the third party package [Spectrum](https://github.com/bgrins/spectrum) as a color selector, the main purpose of this panel is to add IE11 support. You use it by adding it to your page `content_panels`.
 
 #### How to use
 

@@ -1,3 +1,24 @@
 .color-input-widget {
-    height: 60px;
+    display: flex;
+}
+
+.color-input-widget .color-input-widget__text-input {
+    flex: auto;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+.color-input-widget .color-input-widget__color-input {
+    padding: 10px;
+    width: 70px;
+    height: 50px;
+    margin-left: 5px;
+    vertical-align: bottom;
+}
+
+@media only screen and (min-width: 50em) {
+    .color-input-widget .color-input-widget__text-input {
+        flex: none;
+        width: 140px;
+    }
 }

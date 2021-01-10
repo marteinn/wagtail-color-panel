@@ -45,18 +45,16 @@ class PolyfillColorInputWidget(widgets.TextInput):
         )
 
 
-class ColorInputWidget(widgets.Input):
-    input_type = "color"
+class ColorInputWidget(widgets.TextInput):
+    template_name = "wagtail_color_panel/widgets/color-input-widget.html"
 
     def __init__(self, attrs=None):
-        default_attrs = {"class": "color-input-widget"}
+        default_attrs = {
+            "class": "color-input-widget__text-input",
+        }
         attrs = attrs or {}
         attrs = {**default_attrs, **attrs}
         super().__init__(attrs=attrs)
-
-    # def get_panel(self):
-    #     from wagtail_color_panel.edit_handlers import NativeColorPanel
-    #     return NativeColorPanel
 
     @property
     def media(self):
