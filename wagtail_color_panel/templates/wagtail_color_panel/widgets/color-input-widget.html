@@ -1,17 +1,4 @@
 <div class="color-input-widget">
     {% include "django/forms/widgets/text.html" %}
-
-    {% with widget.attrs.id as widget_id %}
-    <input class="color-input-widget__color-input" type="color" name="{{ widget_id }}-color" value="{{ widget.value }}" maxlength="7" id="{{ widget_id }}-color">
-
-    <script>
-        document.getElementById("{{ widget_id }}-color").addEventListener("input", function(evt) {
-            document.getElementById("{{ widget_id }}").value = evt.target.value;
-        }, false);
-
-        document.getElementById("{{ widget_id }}").addEventListener("input", function(evt) {
-            document.getElementById("{{ widget_id }}-color").value = evt.target.value;
-        }, false);
-    </script>
-    {% endwith %}
+    <input class="color-input-widget__color-input" type="color" name="{{ widget.attrs.id }}-color" value="{{ widget.value }}" maxlength="7" id="{{ widget.attrs.id }}-color">
 </div>
