@@ -21,7 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         # pip install flake8 pytest
         pip install -U .[test]
-        pip install wagtail==2.11.3
+        pip install wagtail==2.14.1
         #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     #- name: Lint with flake8
     #  run: |
