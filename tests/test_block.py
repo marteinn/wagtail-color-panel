@@ -3,6 +3,7 @@ from django.test import TestCase
 from wagtail.tests.utils import WagtailTestUtils
 
 from wagtail_color_panel.blocks import NativeColorBlock
+from wagtail_color_panel.widgets import ColorInputWidget
 
 
 class BlockTest(TestCase, WagtailTestUtils):
@@ -14,8 +15,9 @@ class BlockTest(TestCase, WagtailTestUtils):
 
     def test_form_uses_proper_input_type(self):
         block = NativeColorBlock()
-        html = block.render_form("#333333")
+        html = block.field.widget.render_html(name="cat", value="#333333", attrs={})
 
+        self.assertEqual(block.field.widget.__class__, ColorInputWidget)
         self.assertIn('type="color"', html)
 
     def test_that_hex_colors_are_validated(self):

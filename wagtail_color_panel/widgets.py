@@ -1,6 +1,11 @@
-from django.forms import widgets, Media
+import json
+
+from django.forms import widgets
 from django.utils.safestring import mark_safe
-from wagtail.admin.staticfiles import versioned_static
+
+from wagtail.core.telepath import register
+from wagtail.core.widget_adapters import WidgetAdapter
+from wagtail.utils.widgets import WidgetWithScript
 
 
 class PolyfillColorInputWidget(widgets.TextInput):
@@ -45,7 +50,7 @@ class PolyfillColorInputWidget(widgets.TextInput):
         )
 
 
-class ColorInputWidget(widgets.TextInput):
+class ColorInputWidget(WidgetWithScript, widgets.TextInput):
     template_name = "wagtail_color_panel/widgets/color-input-widget.html"
 
     def __init__(self, attrs=None):
@@ -56,12 +61,27 @@ class ColorInputWidget(widgets.TextInput):
         attrs = {**default_attrs, **attrs}
         super().__init__(attrs=attrs)
 
-    @property
-    def media(self):
-        return Media(
-            css={
-                "all": [
-                    versioned_static("wagtail_color_panel/css/color-input-widget.css"),
-                ]
-            }
-        )
+    def render_js_init(self, id_, name, value):
+        return "new ColorInputWidget({0});".format(json.dumps(id_))
+
+    class Media:
+        css = {
+            "all": [
+                "wagtail_color_panel/css/color-input-widget.css",
+            ]
+        }
+        js = [
+            "wagtail_color_panel/js/color-input-widget.js",
+        ]
+
+
+class ColorInputWidgetAdapter(WidgetAdapter):
+    js_constructor = 'wagtail_color_panel.widgets.ColorInput'
+
+    class Media:
+        js = [
+            "wagtail_color_panel/js/color-input-widget-telepath.js",
+        ]
+
+
+register(ColorInputWidgetAdapter(), ColorInputWidget)
