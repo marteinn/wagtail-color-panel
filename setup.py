@@ -11,7 +11,7 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 
-install_requires = ["wagtail"]
+install_requires = ["wagtail>=2.13"]
 
 tests_require = ["pytest-django", "wagtail-factories", "pytest"]
 
@@ -59,6 +59,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Topic :: Utilities",
     ],
     setup_requires=["setuptools_scm", "pytest-runner"],
