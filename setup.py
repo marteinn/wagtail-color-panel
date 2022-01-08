@@ -10,13 +10,8 @@ install_requires = ["wagtail>=2.13"]
 
 tests_require = ["pytest-django", "wagtail-factories", "pytest"]
 
-# Convert markdown to rst
-try:
-    from pypandoc import convert_file
-
-    long_description = convert_file("README.md", "rst")
-except:  # NOQA
-    long_description = ""
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 version = ""
 with io.open("wagtail_color_panel/__init__.py", "r", encoding="utf8") as fd:
@@ -24,12 +19,12 @@ with io.open("wagtail_color_panel/__init__.py", "r", encoding="utf8") as fd:
         r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE
     ).group(1)
 
-
 setup(
     version=version,
     name="wagtail-color-panel",
     description="",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author="Martin Sandström",
     author_email="martin@marteinn.se",
     url="https://github.com/marteinn/wagtail-color-panel",
