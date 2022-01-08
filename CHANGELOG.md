@@ -1,5 +1,10 @@
 # Changelog
 
+## In development
+
+- Drop Python 3.6 support
+
+
 ## 1.3.0 (2021.09.27)
 
 - Add support for Wagtail 2.13+ (@marts)
