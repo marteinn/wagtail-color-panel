@@ -2,7 +2,6 @@ import json
 
 from django.forms import widgets
 from django.utils.safestring import mark_safe
-
 from wagtail.core.telepath import register
 from wagtail.core.widget_adapters import WidgetAdapter
 from wagtail.utils.widgets import WidgetWithScript

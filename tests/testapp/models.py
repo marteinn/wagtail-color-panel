@@ -1,10 +1,10 @@
 from django.db import models
-from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
+from wagtail.core.models import Page
 
-from wagtail_color_panel.fields import ColorField
-from wagtail_color_panel.edit_handlers import NativeColorPanel
 from wagtail_color_panel.blocks import NativeColorBlock
+from wagtail_color_panel.edit_handlers import NativeColorPanel
+from wagtail_color_panel.fields import ColorField
 
 
 class PageWithColorField(Page):

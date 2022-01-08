@@ -1,10 +1,10 @@
 import io
+import os
 import re
 import sys
-import os
 from os import path
-from setuptools import setup, find_packages
 
+from setuptools import find_packages, setup
 
 if sys.argv[-1] == "publish":
     os.system("python setup.py sdist upload")

@@ -2,8 +2,8 @@ from django import forms
 from django.utils.functional import cached_property
 from wagtail.core.blocks import FieldBlock
 
-from wagtail_color_panel.widgets import ColorInputWidget
 from wagtail_color_panel.validators import hex_triplet_validator
+from wagtail_color_panel.widgets import ColorInputWidget
 
 
 class NativeColorBlock(FieldBlock):
