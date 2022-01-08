@@ -10,7 +10,6 @@ from wagtail_color_panel.widgets import ColorInputWidget
 # from wagtail.admin.forms import WagtailAdminModelForm, WagtailAdminPageForm
 
 
-
 class PanelTest(TestCase, WagtailTestUtils):
     def test_field_to_panel_mapping(self):
         """
