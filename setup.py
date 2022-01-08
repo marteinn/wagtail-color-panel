@@ -2,7 +2,7 @@ import io
 import os
 import re
 import sys
-from os import path
+from pathlib import Path
 
 from setuptools import find_packages, setup
 
