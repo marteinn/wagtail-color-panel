@@ -1,5 +1,4 @@
-![Wagtail-Color-Panel](https://github.com/marteinn/wagtail-color-panel/workflows/Wagtail-Color-Panel/badge.svg)
-[![PyPI version](https://badge.fury.io/py/wagtail-color-panel.svg)](https://badge.fury.io/py/wagtail-color-panel)
+[![Test and publish](https://github.com/marteinn/wagtail-color-panel/actions/workflows/main.yml/badge.svg)](https://github.com/marteinn/wagtail-color-panel/actions/workflows/main.yml) [![PyPI version](https://badge.fury.io/py/wagtail-color-panel.svg)](https://badge.fury.io/py/wagtail-color-panel)
 
 # Wagtail-Color-Panel
 

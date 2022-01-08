@@ -9,5 +9,5 @@ class ColorField(models.CharField):
     description = _("Hex triplet colors")
 
     def __init__(self, *args, **kwargs):
-        kwargs.setdefault('max_length', 7)
+        kwargs.setdefault("max_length", 7)
         super().__init__(*args, **kwargs)
