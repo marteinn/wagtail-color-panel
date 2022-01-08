@@ -11,7 +11,7 @@ class PageWithColorField(Page):
     color = ColorField()
 
     content_panels = Page.content_panels + [
-        NativeColorPanel('color'),
+        NativeColorPanel("color"),
     ]
 
 
@@ -24,6 +24,8 @@ class PageWithDefaultValue(Page):
 
 
 class PageWithStreamfield(Page):
-    body = StreamField([
-        ('color', NativeColorBlock()),
-    ])
+    body = StreamField(
+        [
+            ("color", NativeColorBlock()),
+        ]
+    )

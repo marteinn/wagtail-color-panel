@@ -76,7 +76,7 @@ class ColorInputWidget(WidgetWithScript, widgets.TextInput):
 
 
 class ColorInputWidgetAdapter(WidgetAdapter):
-    js_constructor = 'wagtail_color_panel.widgets.ColorInput'
+    js_constructor = "wagtail_color_panel.widgets.ColorInput"
 
     class Media:
         js = [

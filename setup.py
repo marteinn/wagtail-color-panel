@@ -18,14 +18,16 @@ tests_require = ["pytest-django", "wagtail-factories", "pytest"]
 # Convert markdown to rst
 try:
     from pypandoc import convert_file
+
     long_description = convert_file("README.md", "rst")
 except:  # NOQA
     long_description = ""
 
-version = ''
-with io.open('wagtail_color_panel/__init__.py', 'r', encoding='utf8') as fd:
-    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
-                        fd.read(), re.MULTILINE).group(1)
+version = ""
+with io.open("wagtail_color_panel/__init__.py", "r", encoding="utf8") as fd:
+    version = re.search(
+        r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE
+    ).group(1)
 
 
 setup(
@@ -63,5 +65,5 @@ setup(
         "Topic :: Utilities",
     ],
     setup_requires=["setuptools_scm", "pytest-runner"],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
 )

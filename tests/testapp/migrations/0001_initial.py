@@ -12,52 +12,102 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('wagtailcore', '0052_pagelogentry'),
+        ("wagtailcore", "0052_pagelogentry"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='PageWithCharColorField',
+            name="PageWithCharColorField",
             fields=[
-                ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('color', models.CharField(max_length=7)),
+                (
+                    "page_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="wagtailcore.Page",
+                    ),
+                ),
+                ("color", models.CharField(max_length=7)),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
-            bases=('wagtailcore.page',),
+            bases=("wagtailcore.page",),
         ),
         migrations.CreateModel(
-            name='PageWithColorField',
+            name="PageWithColorField",
             fields=[
-                ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('color', wagtail_color_panel.fields.ColorField(max_length=7)),
+                (
+                    "page_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="wagtailcore.Page",
+                    ),
+                ),
+                ("color", wagtail_color_panel.fields.ColorField(max_length=7)),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
-            bases=('wagtailcore.page',),
+            bases=("wagtailcore.page",),
         ),
         migrations.CreateModel(
-            name='PageWithDefaultValue',
+            name="PageWithDefaultValue",
             fields=[
-                ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('color', wagtail_color_panel.fields.ColorField(default='#FF0000', max_length=7)),
+                (
+                    "page_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="wagtailcore.Page",
+                    ),
+                ),
+                (
+                    "color",
+                    wagtail_color_panel.fields.ColorField(
+                        default="#FF0000", max_length=7
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
-            bases=('wagtailcore.page',),
+            bases=("wagtailcore.page",),
         ),
         migrations.CreateModel(
-            name='PageWithStreamfield',
+            name="PageWithStreamfield",
             fields=[
-                ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('body', wagtail.core.fields.StreamField([('color', wagtail_color_panel.blocks.NativeColorBlock())])),
+                (
+                    "page_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="wagtailcore.Page",
+                    ),
+                ),
+                (
+                    "body",
+                    wagtail.core.fields.StreamField(
+                        [("color", wagtail_color_panel.blocks.NativeColorBlock())]
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
-            bases=('wagtailcore.page',),
+            bases=("wagtailcore.page",),
         ),
     ]
