@@ -6,11 +6,6 @@ from os import path
 
 from setuptools import find_packages, setup
 
-if sys.argv[-1] == "publish":
-    os.system("python setup.py sdist upload")
-    sys.exit()
-
-
 install_requires = ["wagtail>=2.13"]
 
 tests_require = ["pytest-django", "wagtail-factories", "pytest"]
