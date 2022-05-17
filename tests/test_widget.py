@@ -1,9 +1,9 @@
 from django.test import TestCase
-from wagtail.tests.utils import WagtailTestUtils
+from wagtail.test.utils import WagtailTestUtils
 
 from tests.testapp.factories import PageWithColorFieldPageFactory
 from tests.testapp.models import PageWithColorField
-from wagtail_color_panel.edit_handlers import NativeColorPanel
+from wagtail_color_panel.panels import NativeColorPanel
 from wagtail_color_panel.widgets import ColorInputWidget
 
 # from wagtail.admin.edit_handlers import get_form_for_model

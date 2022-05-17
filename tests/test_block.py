@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-from wagtail.tests.utils import WagtailTestUtils
+from wagtail.test.utils import WagtailTestUtils
 
 from wagtail_color_panel.blocks import NativeColorBlock
 from wagtail_color_panel.widgets import ColorInputWidget

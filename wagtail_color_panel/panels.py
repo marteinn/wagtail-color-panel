@@ -1,4 +1,4 @@
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.panels import FieldPanel
 
 from wagtail_color_panel.widgets import ColorInputWidget, PolyfillColorInputWidget
 

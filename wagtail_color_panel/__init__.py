@@ -1,5 +1,5 @@
 __title__ = "wagtail_color_panel"
-__version__ = "1.3.1"
+__version__ = "1.4.0"
 __build__ = 6
 __author__ = "Martin Sandström"
 __license__ = "MIT"
