@@ -22,7 +22,9 @@ Introduces panels for selecting colors in Wagtail.
 from wagtail.core.models import Page
 
 from wagtail_color_panel.fields import ColorField
-from wagtail_color_panel.edit_handlers import NativeColorPanel
+from wagtail_color_panel.panels import NativeColorPanel
+# For wagtail version < 3:
+# from wagtail_color_panel.edit_handlers import NativeColorPanel
 
 
 class MyPage(Page):
