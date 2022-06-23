@@ -28,8 +28,18 @@ class PageWithDefaultValue(Page):
 
 
 class PageWithStreamfield(Page):
-    body = StreamField(
-        [
-            ("color", NativeColorBlock()),
-        ]
+    body = (
+        StreamField(
+            [
+                ("color", NativeColorBlock()),
+            ],
+            use_json_field=True,
+        )
+        if WAGTAIL_VERSION >= (3, 0)
+        else StreamField(
+            [
+                ("color", NativeColorBlock()),
+            ],
+            use_json_field=True,
+        )
     )
