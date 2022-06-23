@@ -4,10 +4,12 @@ from django.db import migrations, models
 import django.db.models.deletion
 import wagtail_color_panel.blocks
 import wagtail_color_panel.fields
+
 if WAGTAIL_VERSION >= (3, 0):
     import wagtail.fields as wagtail_fields
 else:
     import wagtail.core.fields as wagtail_fields
+
 
 class Migration(migrations.Migration):
 

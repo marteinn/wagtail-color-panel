@@ -1,4 +1,5 @@
 import os
+
 from wagtail import VERSION as WAGTAIL_VERSION
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

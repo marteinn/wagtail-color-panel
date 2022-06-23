@@ -6,10 +6,12 @@ from tests.testapp.factories import (
     PageWithColorFieldPageFactory,
     PageWithDefaultValuePageFactory,
 )
+
 if WAGTAIL_VERSION >= (3, 0):
     from wagtail.test.utils import WagtailTestUtils
 else:
     from wagtail.tests.utils import WagtailTestUtils
+
 
 class FieldTest(TestCase, WagtailTestUtils):
     def test_strings_larger_than_7_raises_error(self):

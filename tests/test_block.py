@@ -10,6 +10,7 @@ if WAGTAIL_VERSION >= (3, 0):
 else:
     from wagtail.tests.utils import WagtailTestUtils
 
+
 class BlockTest(TestCase, WagtailTestUtils):
     def test_color_block_render(self):
         block = NativeColorBlock()
