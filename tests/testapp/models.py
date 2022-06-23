@@ -6,10 +6,12 @@ from wagtail_color_panel.edit_handlers import NativeColorPanel
 from wagtail_color_panel.fields import ColorField
 
 if WAGTAIL_VERSION >= (3, 0):
+    from wagtail.admin.panels import FieldPanel
     from wagtail.fields import StreamField
     from wagtail.models import Page
 else:
     from wagtail.core.fields import StreamField
+    from wagtail.core.fields import StreamField as FieldPanel
     from wagtail.core.models import Page
 
 
@@ -24,9 +26,17 @@ class PageWithColorField(Page):
 class PageWithCharColorField(Page):
     color = models.CharField(max_length=7)
 
+    content_panels = Page.content_panels + [
+        FieldPanel("color"),
+    ]
+
 
 class PageWithDefaultValue(Page):
     color = ColorField(default="#FF0000")
+
+    content_panels = Page.content_panels + [
+        NativeColorPanel("color"),
+    ]
 
 
 class PageWithStreamfield(Page):
@@ -44,3 +54,7 @@ class PageWithStreamfield(Page):
             ]
         )
     )
+
+    content_panels = Page.content_panels + [
+        FieldPanel("body"),
+    ]
