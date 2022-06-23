@@ -7,11 +7,12 @@ from wagtail_color_panel.fields import ColorField
 
 if WAGTAIL_VERSION >= (3, 0):
     from wagtail.admin.panels import FieldPanel
+    from wagtail.admin.panels import FieldPanel as StreamFieldPanel
     from wagtail.fields import StreamField
     from wagtail.models import Page
 else:
+    from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
     from wagtail.core.fields import StreamField
-    from wagtail.core.fields import StreamField as FieldPanel
     from wagtail.core.models import Page
 
 
@@ -56,5 +57,5 @@ class PageWithStreamfield(Page):
     )
 
     content_panels = Page.content_panels + [
-        FieldPanel("body"),
+        StreamFieldPanel("body"),
     ]
