@@ -1,7 +1,5 @@
 import io
-import os
 import re
-import sys
 from pathlib import Path
 
 from setuptools import find_packages, setup
@@ -43,6 +41,7 @@ setup(
         "Framework :: Django",
         "Framework :: Wagtail",
         "Framework :: Wagtail :: 2",
+        "Framework :: Wagtail :: 3",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
