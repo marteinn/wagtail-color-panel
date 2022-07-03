@@ -13,9 +13,9 @@ jobs:
           - "3.9"
           - "3.10"
         wagtail-version:
-          - 2.13.5
-          - 2.14.2
-          - 2.15.1
+          - 2.15
+          - 2.16
+          - 3.0.1
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -40,7 +40,7 @@ jobs:
         with:
           options: "--check --verbose"
           src: "."
-          version: "21.5b1"
+          version: "22.3.0"
 
   lint-isort:
     runs-on: ubuntu-latest

@@ -1,9 +1,14 @@
 from django import forms
 from django.utils.functional import cached_property
-from wagtail.core.blocks import FieldBlock
+from wagtail import VERSION as WAGTAIL_VERSION
 
 from wagtail_color_panel.validators import hex_triplet_validator
 from wagtail_color_panel.widgets import ColorInputWidget
+
+if WAGTAIL_VERSION >= (3, 0):
+    from wagtail.blocks import FieldBlock
+else:
+    from wagtail.core.blocks import FieldBlock
 
 
 class NativeColorBlock(FieldBlock):
