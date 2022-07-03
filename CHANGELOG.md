@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Add support for Wagtail 3.0 and drop support for all Wagtail versions before 2.15.
+
 ## 1.3.1 (2022.01.08)
 
 - Drop Python 3.6 support

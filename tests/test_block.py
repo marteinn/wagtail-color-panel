@@ -1,9 +1,14 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-from wagtail.tests.utils import WagtailTestUtils
+from wagtail import VERSION as WAGTAIL_VERSION
 
 from wagtail_color_panel.blocks import NativeColorBlock
 from wagtail_color_panel.widgets import ColorInputWidget
+
+if WAGTAIL_VERSION >= (3, 0):
+    from wagtail.test.utils import WagtailTestUtils
+else:
+    from wagtail.tests.utils import WagtailTestUtils
 
 
 class BlockTest(TestCase, WagtailTestUtils):
