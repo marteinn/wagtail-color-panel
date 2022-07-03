@@ -28,3 +28,8 @@ class PolyfillColorPanel(FieldPanel):
         return {
             self.field_name: PolyfillColorInputWidget(),
         }
+
+    def get_form_options(self):
+        opts = super().get_form_options()
+        opts["widgets"] = self.widget_overrides()
+        return opts
