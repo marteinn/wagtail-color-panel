@@ -14,11 +14,12 @@ jobs:
           - "3.10"
           - "3.11"
         wagtail-version:
-          - 2.15.6
-          - 2.16.3
-          - 3.0.3
-          - 4.0.4
-          - 4.1.1
+          - "2.15.6"
+          - "4.1.2"
+          - "4.2"
+        exclude:
+          - python-version: "3.11"
+            wagtail-version: "2.15.6"
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
