@@ -9,8 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add Wagtail 4.1 and 4.2 support (@marteinn)
 
+### Fixed
+- Add issue template
+
 ### Removed
-- Drop Wagtail 2.16 support
+- Drop Wagtail 2.16 support (@marteinn)
 
 ## [1.4.0] - 2022-07-03
 ### Added
