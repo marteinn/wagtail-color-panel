@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Add Wagtail 4.1 and 4.2 support (@marteinn)
+
+### Removed
+- Drop Wagtail 2.16 support
+
 ## [1.4.0] - 2022-07-03
 ### Added
 - Add support for Wagtail 3.0 (@BrianXu20)
