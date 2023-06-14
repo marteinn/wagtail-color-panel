@@ -9,7 +9,7 @@ This panel uses the native `<input type="color"...` color selector (hence the na
 #### How to use
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 from wagtail_color_panel.edit_handlers import NativeColorPanel
 
 class MyPage(Page):
@@ -28,7 +28,7 @@ This panel uses the third party package [Spectrum](https://github.com/bgrins/spe
 #### How to use
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 from wagtail_color_panel.edit_handlers import PolyfillColorPanel
 
 class MyPage(Page):
@@ -49,7 +49,7 @@ A field based on CharField that only accept color values saved as hex values (ex
 #### How to use
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 from wagtail_color_panel.fields import ColorField
 
 class MyPage(Page):
@@ -66,17 +66,17 @@ This block uses the native `<input type="color"...` color selector (hence the na
 #### How to use
 
 ```python
-from wagtail.core.models import Page
-from wagtail.core.fields import StreamField
+from wagtail.models import Page
+from wagtail.fields import StreamField
 from wagtail_color_panel.blocks import NativeColorBlock
 
 
 class MyStreamFieldPage(Page):
     body = StreamField([
         ('color', NativeColorBlock(default="#000000")),
-    ])
+    ], use_json_field=True)
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('body'),
+        FieldPanel('body'),
     ]
 ```

@@ -6,9 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Add Wagtail 5.0 support (@katdom13)
+- Add Python 4.2 support (@katdom13)
+- Add Python 3.11 support
+
 ### Changed
 ### Fixed
 ### Removed
+- Drop Wagtail < 4.1 support (@katdom13)
+- Drop Django 4.0 support (@katdom13)
+- Drop Python 3.7 support (@katdom13)
 
 ## [1.4.1] - 2023-02-19
 ### Added
