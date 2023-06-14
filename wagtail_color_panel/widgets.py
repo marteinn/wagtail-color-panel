@@ -2,15 +2,10 @@ import json
 
 from django.forms import widgets
 from django.utils.safestring import mark_safe
-from wagtail import VERSION as WAGTAIL_VERSION
 from wagtail.utils.widgets import WidgetWithScript
 
-if WAGTAIL_VERSION >= (3, 0):
-    from wagtail.telepath import register
-    from wagtail.widget_adapters import WidgetAdapter
-else:
-    from wagtail.telepath import register
-    from wagtail.widget_adapters import WidgetAdapter
+from wagtail.telepath import register
+from wagtail.widget_adapters import WidgetAdapter
 
 
 class PolyfillColorInputWidget(widgets.TextInput):

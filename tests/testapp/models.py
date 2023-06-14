@@ -1,19 +1,13 @@
 from django.db import models
-from wagtail import VERSION as WAGTAIL_VERSION
 
 from wagtail_color_panel.blocks import NativeColorBlock
 from wagtail_color_panel.edit_handlers import NativeColorPanel
 from wagtail_color_panel.fields import ColorField
 
-if WAGTAIL_VERSION >= (3, 0):
-    from wagtail.admin.panels import FieldPanel
-    from wagtail.admin.panels import FieldPanel as StreamFieldPanel
-    from wagtail.fields import StreamField
-    from wagtail.models import Page
-else:
-    from wagtail.admin.panels import FieldPanel, StreamFieldPanel
-    from wagtail.fields import StreamField
-    from wagtail.models import Page
+from wagtail.admin.panels import FieldPanel
+from wagtail.admin.panels import FieldPanel as StreamFieldPanel
+from wagtail.fields import StreamField
+from wagtail.models import Page
 
 
 class PageWithColorField(Page):
@@ -47,12 +41,6 @@ class PageWithStreamfield(Page):
                 ("color", NativeColorBlock()),
             ],
             use_json_field=True,
-        )
-        if WAGTAIL_VERSION >= (3, 0)
-        else StreamField(
-            [
-                ("color", NativeColorBlock()),
-            ]
         )
     )
 

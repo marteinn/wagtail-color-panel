@@ -1,16 +1,12 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-from wagtail import VERSION as WAGTAIL_VERSION
 
 from tests.testapp.factories import (
     PageWithColorFieldPageFactory,
     PageWithDefaultValuePageFactory,
 )
 
-if WAGTAIL_VERSION >= (3, 0):
-    from wagtail.test.utils import WagtailTestUtils
-else:
-    from wagtail.test.utils import WagtailTestUtils
+from wagtail.test.utils import WagtailTestUtils
 
 
 class FieldTest(TestCase, WagtailTestUtils):
