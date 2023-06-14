@@ -4,27 +4,18 @@ from wagtail_color_panel.widgets import ColorInputWidget, PolyfillColorInputWidg
 
 
 class NativeColorPanel(FieldPanel):
-    def widget_overrides(self):
-        # For Wagtail<3.0 we use widget_overrides
-        return {
+    def get_form_options(self):
+        opts = super().get_form_options()
+        opts["widgets"] = {
             self.field_name: ColorInputWidget(),
         }
-
-    def get_form_options(self):
-        # For Wagtail 3.0 we use get_form_options
-        # So we can mix them to provide supports to Wagtail 2,3
-        opts = super().get_form_options()
-        opts["widgets"] = self.widget_overrides()
         return opts
 
 
 class PolyfillColorPanel(FieldPanel):
-    def widget_overrides(self):
-        return {
-            self.field_name: PolyfillColorInputWidget(),
-        }
-
     def get_form_options(self):
         opts = super().get_form_options()
-        opts["widgets"] = self.widget_overrides()
+        opts["widgets"] = {
+            self.field_name: PolyfillColorInputWidget(),
+        }
         return opts
