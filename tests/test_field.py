@@ -1,12 +1,11 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
+from wagtail.test.utils import WagtailTestUtils
 
 from tests.testapp.factories import (
     PageWithColorFieldPageFactory,
     PageWithDefaultValuePageFactory,
 )
-
-from wagtail.test.utils import WagtailTestUtils
 
 
 class FieldTest(TestCase, WagtailTestUtils):

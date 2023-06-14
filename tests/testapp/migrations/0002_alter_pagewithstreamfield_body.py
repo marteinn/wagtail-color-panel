@@ -6,7 +6,6 @@ import wagtail_color_panel.blocks
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("testapp", "0001_initial"),
     ]
@@ -18,6 +17,6 @@ class Migration(migrations.Migration):
             field=wagtail_fields.StreamField(
                 [("color", wagtail_color_panel.blocks.NativeColorBlock())],
                 use_json_field=True,
-            )
+            ),
         ),
     ]

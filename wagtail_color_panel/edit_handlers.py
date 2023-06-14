@@ -1,6 +1,6 @@
-from wagtail_color_panel.widgets import ColorInputWidget, PolyfillColorInputWidget
-
 from wagtail.admin.panels import FieldPanel
+
+from wagtail_color_panel.widgets import ColorInputWidget, PolyfillColorInputWidget
 
 
 class NativeColorPanel(FieldPanel):

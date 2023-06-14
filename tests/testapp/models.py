@@ -1,13 +1,12 @@
 from django.db import models
-
-from wagtail_color_panel.blocks import NativeColorBlock
-from wagtail_color_panel.edit_handlers import NativeColorPanel
-from wagtail_color_panel.fields import ColorField
-
 from wagtail.admin.panels import FieldPanel
 from wagtail.admin.panels import FieldPanel as StreamFieldPanel
 from wagtail.fields import StreamField
 from wagtail.models import Page
+
+from wagtail_color_panel.blocks import NativeColorBlock
+from wagtail_color_panel.edit_handlers import NativeColorPanel
+from wagtail_color_panel.fields import ColorField
 
 
 class PageWithColorField(Page):
@@ -35,13 +34,11 @@ class PageWithDefaultValue(Page):
 
 
 class PageWithStreamfield(Page):
-    body = (
-        StreamField(
-            [
-                ("color", NativeColorBlock()),
-            ],
-            use_json_field=True,
-        )
+    body = StreamField(
+        [
+            ("color", NativeColorBlock()),
+        ],
+        use_json_field=True,
     )
 
     content_panels = Page.content_panels + [
