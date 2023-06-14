@@ -25,5 +25,5 @@ class PanelTest(TestCase, WagtailTestUtils):
         color_panel = page.content_panels[1]
         self.assertEqual(color_panel.__class__, NativeColorPanel)
 
-        color_widget = color_panel.widget_overrides()["color"]
+        color_widget = color_panel.get_form_options()["widgets"]["color"]
         self.assertEqual(color_widget.__class__, ColorInputWidget)
