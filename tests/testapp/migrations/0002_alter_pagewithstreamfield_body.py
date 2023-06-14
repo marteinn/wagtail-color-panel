@@ -5,7 +5,7 @@ from django.db import migrations
 if WAGTAIL_VERSION >= (3, 0):
     import wagtail.fields as wagtail_fields
 else:
-    import wagtail.core.fields as wagtail_fields
+    import wagtail.fields as wagtail_fields
 import wagtail_color_panel.blocks
 
 

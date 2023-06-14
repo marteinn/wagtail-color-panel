@@ -10,7 +10,7 @@ from tests.testapp.factories import (
 if WAGTAIL_VERSION >= (3, 0):
     from wagtail.test.utils import WagtailTestUtils
 else:
-    from wagtail.tests.utils import WagtailTestUtils
+    from wagtail.test.utils import WagtailTestUtils
 
 
 class FieldTest(TestCase, WagtailTestUtils):

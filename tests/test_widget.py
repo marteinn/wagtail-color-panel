@@ -8,7 +8,7 @@ from wagtail_color_panel.widgets import ColorInputWidget
 if WAGTAIL_VERSION >= (3, 0):
     from wagtail.test.utils import WagtailTestUtils
 else:
-    from wagtail.tests.utils import WagtailTestUtils
+    from wagtail.test.utils import WagtailTestUtils
 
 # from wagtail.admin.panels import get_form_for_model
 # from wagtail.admin.forms import WagtailAdminModelForm, WagtailAdminPageForm

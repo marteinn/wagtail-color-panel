@@ -8,7 +8,7 @@ from wagtail_color_panel.widgets import ColorInputWidget
 if WAGTAIL_VERSION >= (3, 0):
     from wagtail.blocks import FieldBlock
 else:
-    from wagtail.core.blocks import FieldBlock
+    from wagtail.blocks import FieldBlock
 
 
 class NativeColorBlock(FieldBlock):

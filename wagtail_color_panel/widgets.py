@@ -9,8 +9,8 @@ if WAGTAIL_VERSION >= (3, 0):
     from wagtail.telepath import register
     from wagtail.widget_adapters import WidgetAdapter
 else:
-    from wagtail.core.telepath import register
-    from wagtail.core.widget_adapters import WidgetAdapter
+    from wagtail.telepath import register
+    from wagtail.widget_adapters import WidgetAdapter
 
 
 class PolyfillColorInputWidget(widgets.TextInput):

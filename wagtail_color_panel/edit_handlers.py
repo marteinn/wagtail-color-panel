@@ -5,7 +5,7 @@ from wagtail_color_panel.widgets import ColorInputWidget, PolyfillColorInputWidg
 if WAGTAIL_VERSION >= (3, 0):
     from wagtail.admin.panels import FieldPanel
 else:
-    from wagtail.admin.edit_handlers import FieldPanel
+    from wagtail.admin.panels import FieldPanel
 
 
 class NativeColorPanel(FieldPanel):
