@@ -17,11 +17,7 @@ jobs:
           - "4.2"
           - "5.0"
           - "5.1"
-        exclude:
-          - python-version: "3.11"
-            wagtail-version: "4.1"
-          - python-version: "3.11"
-            wagtail-version: "4.2"
+          - "5.2"
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
