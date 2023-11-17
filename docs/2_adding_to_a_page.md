@@ -3,7 +3,7 @@
 ### First create a page
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 
 class MyPage(Page):
     ...
@@ -15,7 +15,7 @@ class MyPage(Page):
 Define a ColorField that represents your color, in this example we call it `color`.
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 from wagtail_color_panel.fields import ColorField
 
 class MyPage(Page):
@@ -28,7 +28,7 @@ Note: ColorField is built on top of CharField, so its also possible to use `Char
 ### Add a content panel to represent the field in the admin
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 from wagtail_color_panel.edit_handlers import NativeColorPanel
 
 
@@ -46,7 +46,7 @@ We're done! After migration a color picker should appear.
 ### Full example
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 
 from wagtail_color_panel.fields import ColorField
 from wagtail_color_panel.edit_handlers import NativeColorPanel
