@@ -19,7 +19,7 @@ Introduces panels for selecting colors in Wagtail.
 ## Example
 
 ```python
-from wagtail.core.models import Page
+from wagtail.models import Page
 
 from wagtail_color_panel.fields import ColorField
 from wagtail_color_panel.edit_handlers import NativeColorPanel
