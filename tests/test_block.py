@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
+from wagtail import VERSION as WAGTAIL_VERSION
 from wagtail.test.utils import WagtailTestUtils
 
 from wagtail_color_panel.blocks import NativeColorBlock
@@ -15,8 +16,13 @@ class BlockTest(TestCase, WagtailTestUtils):
 
     def test_form_uses_proper_input_type(self):
         block = NativeColorBlock()
-        html = block.field.widget.render_html(name="cat", value="#333333", attrs={})
 
+        if WAGTAIL_VERSION >= (6, 0):
+            html = block.field.widget.render(name="cat", value="#333333", attrs={})
+        else:
+            html = block.field.widget.render_html(name="cat", value="#333333", attrs={})
+
+        print(html)
         self.assertEqual(block.field.widget.__class__, ColorInputWidget)
         self.assertIn('type="color"', html)
 

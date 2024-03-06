@@ -4,7 +4,7 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-install_requires = ["wagtail>=4.1"]
+install_requires = ["wagtail>=5.2"]
 
 tests_require = ["pytest-django", "wagtail-factories", "pytest"]
 
@@ -39,9 +39,12 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Django",
+        "Framework :: Django :: 3.2",
+        "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.0",
         "Framework :: Wagtail",
-        "Framework :: Wagtail :: 4",
         "Framework :: Wagtail :: 5",
+        "Framework :: Wagtail :: 6",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -51,6 +54,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Topic :: Utilities",
     ],
     setup_requires=["setuptools_scm", "pytest-runner"],
