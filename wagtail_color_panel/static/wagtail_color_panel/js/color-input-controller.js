@@ -6,4 +6,4 @@ class ColorInputController extends window.StimulusModule.Controller {
     }
 }
 
-window.wagtail.app.register('read-only-uuid', ColorInputController);
+window.wagtail.app.register('color-input', ColorInputController);
