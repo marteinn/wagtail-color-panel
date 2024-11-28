@@ -22,7 +22,6 @@ class BlockTest(TestCase, WagtailTestUtils):
         else:
             html = block.field.widget.render_html(name="cat", value="#333333", attrs={})
 
-        print(html)
         self.assertEqual(block.field.widget.__class__, ColorInputWidget)
         self.assertIn('type="color"', html)
 
