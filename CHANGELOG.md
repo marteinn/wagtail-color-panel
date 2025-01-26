@@ -5,10 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Added
 ### Changed
 ### Fixed
 ### Removed
+
+## [1.6.0] - 2025-01-26
+### Added
+- Add Wagtail 6.x support (@katdom13)
+- Add Python 3.11 support (@katdom13)
+
+### Changed
+- Apply Django 5.0 upgrade considerations (@katdom13)
+
+### Removed
+- Drop Wagtail < 5.2 support (@katdom13)
 
 ## [1.5.0] - 2023-12-22
 ### Added
