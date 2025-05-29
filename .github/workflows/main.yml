@@ -35,6 +35,7 @@ jobs:
         pip install -U .[test]
         pip install -q wagtail~=${{ matrix.wagtail-version }}
         pip install -q django~=${{ matrix.django-version }}
+        pip list # For debugging purposes
     - name: Run tests
       run: |
         python runtests.py
