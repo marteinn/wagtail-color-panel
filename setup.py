@@ -45,6 +45,7 @@ setup(
         "Framework :: Wagtail",
         "Framework :: Wagtail :: 5",
         "Framework :: Wagtail :: 6",
+        "Framework :: Wagtail :: 7",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
