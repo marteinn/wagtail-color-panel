@@ -5,9 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ### Changed
+- Add CI testing for Wagtail 6.4 & 7.0
+- Add CI testing for Django 5.2
+
 ### Fixed
+
 ### Removed
+- Drop Wagtail testing for 5.0
+- Drop Django testing for 5.0
 
 ## [1.6.0] - 2025-01-26
 ### Added
