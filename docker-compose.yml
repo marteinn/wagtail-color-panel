@@ -1,0 +1,8 @@
+services:
+  web:
+    image: marteinn/wagtail-color-panel
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - "8085:8000"
