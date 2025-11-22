@@ -41,3 +41,6 @@ docs/_build
 
 # Virtualenv
 venv*
+
+# sqlite
+tests.db
