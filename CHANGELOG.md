@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add support for Wagtail 7.0 (@nickmoreton)
 
 ### Changed
-- Add CI testing for Wagtail 6.4 & 7.0 (@nickmoreton)
+- Add CI testing for 7.0 (@nickmoreton)
 - Add CI testing for Django 5.2 (@nickmoreton)
 - Add test page model for polyfill field (@marteinn)
 
@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ignore local sqlite files (@marteinn)
 
 ### Removed
+- Drop support for EOL Wagtail 5.2 (@marteinn)
+- Drop support for EOL Wagtail 6.4 (@marteinn)
 - Drop Wagtail testing for 5.0 (@nickmoreton)
 - Drop Django testing for 5.0 (@nickmoreton)
 
