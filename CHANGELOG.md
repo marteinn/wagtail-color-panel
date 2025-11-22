@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ignore local sqlite files (@marteinn)
 - Fix STATIC_ROOT warning when running local dev (@marteinn)
 - Ignore staticfils dir (@marteinn)
+- Ignore local claude config (@marteinn)
 
 ### Removed
 - Drop support for EOL Wagtail 5.2 (@marteinn)
