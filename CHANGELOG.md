@@ -7,14 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Add CI testing for Wagtail 6.4 & 7.0
-- Add CI testing for Django 5.2
+- Add CI testing for Wagtail 6.4 & 7.0 (@nickmoreton)
+- Add CI testing for Django 5.2 (@nickmoreton)
 
 ### Fixed
 
 ### Removed
-- Drop Wagtail testing for 5.0
-- Drop Django testing for 5.0
+- Drop Wagtail testing for 5.0 (@nickmoreton)
+- Drop Django testing for 5.0 (@nickmoreton)
 
 ## [1.6.0] - 2025-01-26
 ### Added
