@@ -18,6 +18,9 @@ jobs:
             django-version: "5.1"
           - python-version: "3.9"
             django-version: "5.2"
+          # Don't test wagtail with incompatible python versions
+          - python-version: "3.9"
+            wagtail-version: "7.2"
 
     steps:
     - uses: actions/checkout@v4
