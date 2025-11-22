@@ -41,3 +41,12 @@ docs/_build
 
 # Virtualenv
 venv*
+
+# sqlite
+tests.db
+
+# django staticfiles
+staticfiles
+
+# Ignore claude config
+CLAUDE.local.md

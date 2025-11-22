@@ -5,16 +5,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+### Changed
+### Fixed
+### Removed
+
+## [1.7.0] - 2025-11-22
+### Added
+- Add support for Wagtail 7.2 (@marteinn)
+- Add support for Wagtail 7.1 (@nickmoreton, @tombreit)
+- Add support for Wagtail 7.0 (@nickmoreton)
 
 ### Changed
-- Add CI testing for Wagtail 6.4 & 7.0
-- Add CI testing for Django 5.2
+- Add CI testing for 7.0 (@nickmoreton)
+- Add CI testing for Django 5.2 (@nickmoreton)
+- Add test page model for polyfill field (@marteinn)
+- Add docker environment for local development (@marteinn)
 
 ### Fixed
+- Fix incorrect WAGTAIL_SITE_NAME in settings (@marteinn)
+- Add WAGTAILADMIN_BASE_URL in settings (@marteinn)
+- Ignore local sqlite files (@marteinn)
+- Fix STATIC_ROOT warning when running local dev (@marteinn)
+- Ignore staticfils dir (@marteinn)
+- Ignore local claude config (@marteinn)
 
 ### Removed
-- Drop Wagtail testing for 5.0
-- Drop Django testing for 5.0
+- Drop support for EOL Wagtail 5.2 (@marteinn)
+- Drop support for EOL Wagtail 6.4 (@marteinn)
+- Drop Wagtail testing for 5.0 (@nickmoreton)
+- Drop Django testing for 5.0 (@nickmoreton)
 
 ## [1.6.0] - 2025-01-26
 ### Added

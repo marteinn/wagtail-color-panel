@@ -4,7 +4,7 @@ from wagtail.fields import StreamField
 from wagtail.models import Page
 
 from wagtail_color_panel.blocks import NativeColorBlock
-from wagtail_color_panel.edit_handlers import NativeColorPanel
+from wagtail_color_panel.edit_handlers import NativeColorPanel, PolyfillColorPanel
 from wagtail_color_panel.fields import ColorField
 
 
@@ -13,6 +13,14 @@ class PageWithColorField(Page):
 
     content_panels = Page.content_panels + [
         NativeColorPanel("color"),
+    ]
+
+
+class PageWithPolyfillColorField(Page):
+    color = ColorField()
+
+    content_panels = Page.content_panels + [
+        PolyfillColorPanel("color"),
     ]
 
 

@@ -11,7 +11,7 @@ from wagtail_color_panel.blocks import NativeColorBlock
 class MyStreamFieldPage(Page):
     body = StreamField([
         ('color', NativeColorBlock(default="#000000")),
-    ], use_json_field=True)  # use_json_field is not required with Wagtail 6.0+
+    ])
 
     content_panels = Page.content_panels + [
         FieldPanel('body'),
