@@ -74,6 +74,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ROOT_URLCONF = "tests.urls"
 
-WAGTAIL_SITE_NAME = ("Test Site",)
+WAGTAIL_SITE_NAME = "Test Site"
+WAGTAILADMIN_BASE_URL = "http://localhost:8000"
 SITE_ID = 1
 STATIC_URL = "/static/"

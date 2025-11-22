@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add CI testing for Django 5.2 (@nickmoreton)
 
 ### Fixed
+- Fix incorrect WAGTAIL_SITE_NAME in settings (@marteinn)
+- Add WAGTAILADMIN_BASE_URL in settings (@marteinn)
 
 ### Removed
 - Drop Wagtail testing for 5.0 (@nickmoreton)
