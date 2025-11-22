@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add CI testing for Wagtail 6.4 & 7.0 (@nickmoreton)
 - Add CI testing for Django 5.2 (@nickmoreton)
+- Add test page model for polyfill field (@marteinn)
 
 ### Fixed
 - Fix incorrect WAGTAIL_SITE_NAME in settings (@marteinn)
