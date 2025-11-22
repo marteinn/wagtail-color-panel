@@ -44,3 +44,6 @@ venv*
 
 # sqlite
 tests.db
+
+# django staticfiles
+staticfiles
