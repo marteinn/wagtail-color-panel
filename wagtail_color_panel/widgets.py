@@ -32,7 +32,7 @@ class PolyfillColorInputWidget(widgets.TextInput):
             <script>
             (function(){
                 function init() {
-                    $("#__FIELD_ID__").spectrum({
+                    $(__FIELD_ID__).spectrum({
                         showPalette: false,
                         preferredFormat: "hex",
                         showInput: true,
@@ -49,7 +49,7 @@ class PolyfillColorInputWidget(widgets.TextInput):
             })();
             </script>
             """.replace(
-                "__FIELD_ID__", field_id
+                "__FIELD_ID__", json.dumps(field_id)
             )
         )
 
