@@ -1,4 +1,24 @@
-include README.md LICENSE runtests.py
+# Include essential files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include runtests.py
+
+# Include package data
 recursive-include wagtail_color_panel/static *
 recursive-include wagtail_color_panel/templates *
+
+# Exclude development and CI files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+prune .github
+prune docs
+prune tests/testapp/management
+exclude .editorconfig
+exclude .gitignore
+exclude .isort.cfg
+exclude Dockerfile
+exclude docker-compose.yml
+exclude docker-entrypoint.sh
 prune img*

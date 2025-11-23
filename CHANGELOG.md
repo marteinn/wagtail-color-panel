@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+- Exclude development files from release build (@marteinn)
+
 ### Fixed
 - Drop deprecated tests_require in favor of extras_require/test (@marteinn)
 - Drop MIT classifier in favor of setup.license MIT (@marteinn)
