@@ -6,8 +6,6 @@ from setuptools import find_packages, setup
 
 install_requires = ["wagtail>=6.3"]
 
-tests_require = ["pytest-django", "wagtail-factories", "pytest"]
-
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
@@ -32,8 +30,7 @@ setup(
     include_package_data=True,
     install_requires=install_requires,
     zip_safe=False,
-    tests_require=tests_require,
-    extras_require={"test": tests_require},
+    extras_require={"test": ["pytest-django", "wagtail-factories", "pytest"]},
     license="MIT",
     classifiers=[
         "Development Status :: 5 - Production/Stable",

@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 ### Changed
 ### Fixed
+- Drop deprecated tests_require in favor of extras_require/test (@marteinn)
+
 ### Removed
 
 ## [1.7.0] - 2025-11-22
