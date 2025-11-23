@@ -18,7 +18,7 @@ with io.open("wagtail_color_panel/__init__.py", "r", encoding="utf8") as fd:
 setup(
     version=version,
     name="wagtail-color-panel",
-    description="",
+    description="Introduces panels for selecting colors in Wagtail.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Martin Sandström",
