@@ -16,14 +16,19 @@ with io.open("wagtail_color_panel/__init__.py", "r", encoding="utf8") as fd:
     ).group(1)
 
 setup(
-    version=version,
     name="wagtail-color-panel",
+    version=version,
     description="Introduces panels for selecting colors in Wagtail.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Martin Sandström",
     author_email="martin@marteinn.se",
     url="https://github.com/marteinn/wagtail-color-panel",
+    project_urls={
+        "Bug Reports": "https://github.com/marteinn/wagtail-color-panel/issues",
+        "Source": "https://github.com/marteinn/wagtail-color-panel",
+        "Changelog": "https://github.com/marteinn/wagtail-color-panel/blob/develop/CHANGELOG.md",
+    },
     packages=find_packages(
         exclude=("*.tests", "*.tests.*", "tests.*", "tests", "example*")
     ),
