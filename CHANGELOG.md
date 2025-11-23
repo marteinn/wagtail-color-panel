@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 - Fix potential xss vulnerability in PolyfillColorInputWidget by escaping field id (@marteinn)
+- Remove dead code for Wagtail < 6.0 support (@marteinn)
 
 ### Removed
 
