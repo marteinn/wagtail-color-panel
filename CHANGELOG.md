@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+- Mark PolyfillColorPanel as deprecated and will be removed in v2.0.0 (@marteinn)
 - Exclude development files from release build (@marteinn)
 - Add package description (@marteinn)
 - Add project urls in setup (@marteinn)
