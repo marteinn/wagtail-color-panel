@@ -28,4 +28,4 @@ ColorInputWidget.prototype.getValue = function() {
 
 ColorInputWidget.prototype.focus = function() {
     this.textInput.focus();
-}
+};
