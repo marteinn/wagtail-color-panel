@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Drop deprecated tests_require in favor of extras_require/test (@marteinn)
 - Drop MIT classifier in favor of setup.license MIT (@marteinn)
 - Fix invalid include in manifest (@marteinn)
+- Drop redundant setup_requires from setup (@marteinn)
 
 ### Removed
 
