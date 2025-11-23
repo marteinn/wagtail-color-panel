@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.7.1] - 2025-11-23
+### Changed
+- Mark PolyfillColorPanel as deprecated and will be removed in v2.0.0 (@marteinn)
+- Exclude development files from release build (@marteinn)
+- Add package description (@marteinn)
+- Add project urls in setup (@marteinn)
+
+### Fixed
+- Drop deprecated tests_require in favor of extras_require/test (@marteinn)
+- Drop MIT classifier in favor of setup.license MIT (@marteinn)
+- Fix invalid include in manifest (@marteinn)
+- Drop redundant setup_requires from setup (@marteinn)
+
 ## [1.7.0] - 2025-11-22
 ### Added
 - Add support for Wagtail 7.2 (@marteinn)

@@ -6,8 +6,6 @@ from setuptools import find_packages, setup
 
 install_requires = ["wagtail>=6.3"]
 
-tests_require = ["pytest-django", "wagtail-factories", "pytest"]
-
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
@@ -18,22 +16,26 @@ with io.open("wagtail_color_panel/__init__.py", "r", encoding="utf8") as fd:
     ).group(1)
 
 setup(
-    version=version,
     name="wagtail-color-panel",
-    description="",
+    version=version,
+    description="Introduces panels for selecting colors in Wagtail.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Martin Sandström",
     author_email="martin@marteinn.se",
     url="https://github.com/marteinn/wagtail-color-panel",
+    project_urls={
+        "Bug Reports": "https://github.com/marteinn/wagtail-color-panel/issues",
+        "Source": "https://github.com/marteinn/wagtail-color-panel",
+        "Changelog": "https://github.com/marteinn/wagtail-color-panel/blob/develop/CHANGELOG.md",
+    },
     packages=find_packages(
         exclude=("*.tests", "*.tests.*", "tests.*", "tests", "example*")
     ),
     include_package_data=True,
     install_requires=install_requires,
     zip_safe=False,
-    tests_require=tests_require,
-    extras_require={"test": tests_require},
+    extras_require={"test": ["pytest-django", "wagtail-factories", "pytest"]},
     license="MIT",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -46,7 +48,6 @@ setup(
         "Framework :: Wagtail :: 6",
         "Framework :: Wagtail :: 7",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
@@ -57,6 +58,5 @@ setup(
         "Programming Language :: Python :: 3.13",
         "Topic :: Utilities",
     ],
-    setup_requires=["setuptools_scm", "pytest-runner"],
     python_requires=">=3.9",
 )
