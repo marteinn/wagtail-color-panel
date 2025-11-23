@@ -1,4 +1,4 @@
 include README.md LICENSE runtests.py
-include wagtail_color_panel/static/**
-include wagtail_color_panel/templates/**
+recursive-include wagtail_color_panel/static *
+recursive-include wagtail_color_panel/templates *
 prune img*
