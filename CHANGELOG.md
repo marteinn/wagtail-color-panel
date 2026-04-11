@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove dead code for Wagtail < 6.0 support (@marteinn)
 - Pin all GitHub Actions to commit SHAs and upgrade psf/black from 22.3.0 to 26.3.1 (@marteinn)
 - Add top-level read-only permissions to GitHub Actions workflow (@marteinn)
+- Require environment approval for PyPI publish in GitHub Actions workflow (@marteinn)
 
 ### Removed
 
