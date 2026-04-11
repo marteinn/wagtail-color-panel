@@ -1,6 +1,10 @@
 name: Test and publish
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [develop, main]
+    tags: ['v*', 'testv*']
+  pull_request:
 
 permissions:
   contents: read
@@ -64,7 +68,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install isort
+          pip install isort==8.0.1
           isort . --check-only
 
   publish:
