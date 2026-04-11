@@ -14,20 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
         wagtail-version: ["6.3", "7.0", "7.1", "7.2"]
         django-version: ["4.2", "5.1", "5.2"]
         exclude:
           # Don't test django with incompatible python versions
           - python-version: "3.13"
             django-version: "4.2"
-          - python-version: "3.9"
-            django-version: "5.1"
-          - python-version: "3.9"
-            django-version: "5.2"
           # Don't test wagtail with incompatible python versions
-          - python-version: "3.9"
-            wagtail-version: "7.2"
 
     steps:
     - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1

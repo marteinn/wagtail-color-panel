@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Pin isort to specific version in CI (@marteinn)
 
 ### Removed
+- Drop support for EOL python 3.9 (@marteinn)
 
 ## [1.7.1] - 2025-11-23
 ### Changed
