@@ -10,6 +10,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.8.0] - 2026-04-12
+### Added
+- Add Python 3.14 support (@marteinn)
+- Add Django 6.0 support (@marteinn)
+- Add Wagtail 7.3 support (@marteinn)
+
+### Fixed
+- Fix potential xss vulnerability in PolyfillColorInputWidget by escaping field id (@marteinn)
+- Remove dead code for Wagtail < 6.0 support (@marteinn)
+- Pin all GitHub Actions to commit SHAs and upgrade psf/black from 22.3.0 to 26.3.1 (@marteinn)
+- Add top-level read-only permissions to GitHub Actions workflow (@marteinn)
+- Require environment approval for PyPI publish in GitHub Actions workflow (@marteinn)
+- Restrict GitHub Actions push trigger to main branches and release tags (@marteinn)
+- Pin isort to specific version in CI (@marteinn)
+- Fix broken jQuery selector in PolyfillColorInputWidget caused by missing # prefix after XSS fix (@marteinn)
+- Only run publish job in CI on tag pushes (@marteinn)
+- Update actions/checkout and actions/setup-python actions to latest version (@marteinn)
+- Cache pip dependencies in CI test job (@marteinn)
+
+### Removed
+- Drop support for EOL python 3.9 (@marteinn)
+- Drop Django 5.1 support (@marteinn)
+- Drop Wagtail 7.1 support (@marteinn)
+
 ## [1.7.1] - 2025-11-23
 ### Changed
 - Mark PolyfillColorPanel as deprecated and will be removed in v2.0.0 (@marteinn)
