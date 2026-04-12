@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix broken jQuery selector in PolyfillColorInputWidget caused by missing # prefix after XSS fix (@marteinn)
 - Only run publish job in CI on tag pushes (@marteinn)
 - Update actions/checkout and actions/setup-python actions to latest version (@marteinn)
+- Cache pip dependencies in CI test job (@marteinn)
 
 ### Removed
 - Drop support for EOL python 3.9 (@marteinn)
