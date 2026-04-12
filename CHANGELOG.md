@@ -6,11 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Fixed
+### Removed
+
+## [1.8.0] - 2026-04-12
+### Added
 - Add Python 3.14 support (@marteinn)
 - Add Django 6.0 support (@marteinn)
 - Add Wagtail 7.3 support (@marteinn)
 
-### Changed
 ### Fixed
 - Fix potential xss vulnerability in PolyfillColorInputWidget by escaping field id (@marteinn)
 - Remove dead code for Wagtail < 6.0 support (@marteinn)
