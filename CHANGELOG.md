@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.8.1] - 2026-04-12
+### Fixed
+- Revert pip caching in CI as it caused test suite to break (@marteinn)
+
 ## [1.8.0] - 2026-04-12
 ### Added
 - Add Python 3.14 support (@marteinn)
