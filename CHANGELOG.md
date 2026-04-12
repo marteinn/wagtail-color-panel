@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 ### Changed
 ### Fixed
+- Revert pip caching in CI as it caused test suite to break (@marteinn)
+
 ### Removed
 
 ## [1.8.0] - 2026-04-12
