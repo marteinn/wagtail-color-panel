@@ -31,7 +31,7 @@ class PolyfillWidgetTest(TestCase, WagtailTestUtils):
             attrs={"id": 'my"field'},
         )
 
-        # Should contain properly escaped JavaScript string
-        self.assertIn(r'$("my\"field")', html)
+        # Should contain properly escaped JavaScript string with # prefix
+        self.assertIn(r'$("#" + "my\"field")', html)
         # Should not contain unescaped quote that would break JavaScript
-        self.assertNotIn('$("my"field")', html)
+        self.assertNotIn('$("#" + "my"field")', html)

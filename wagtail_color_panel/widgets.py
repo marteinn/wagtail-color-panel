@@ -26,13 +26,11 @@ class PolyfillColorInputWidget(widgets.TextInput):
         out = super().render(name, value, attrs, renderer=renderer)
         field_id = attrs["id"]
 
-        return mark_safe(
-            out
-            + """
+        return mark_safe(out + """
             <script>
             (function(){
                 function init() {
-                    $(__FIELD_ID__).spectrum({
+                    $("#" + __FIELD_ID__).spectrum({
                         showPalette: false,
                         preferredFormat: "hex",
                         showInput: true,
@@ -48,10 +46,7 @@ class PolyfillColorInputWidget(widgets.TextInput):
                 });
             })();
             </script>
-            """.replace(
-                "__FIELD_ID__", json.dumps(field_id)
-            )
-        )
+            """.replace("__FIELD_ID__", json.dumps(field_id)))
 
 
 class ColorInputWidget(widgets.TextInput):  # type: ignore
