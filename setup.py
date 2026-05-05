@@ -4,7 +4,7 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-install_requires = ["wagtail>=6.3"]
+install_requires = ["wagtail>=7.0"]
 
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
@@ -45,7 +45,6 @@ setup(
         "Framework :: Django :: 5.2",
         "Framework :: Django :: 6.0",
         "Framework :: Wagtail",
-        "Framework :: Wagtail :: 6",
         "Framework :: Wagtail :: 7",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",

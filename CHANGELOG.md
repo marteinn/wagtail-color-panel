@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Add Wagtail 7.4 LTS support
 ### Changed
 ### Fixed
 ### Removed
