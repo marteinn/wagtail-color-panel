@@ -13,7 +13,7 @@ Introduces panels for selecting colors in Wagtail.
 - NativeColorBlock for usage in a StreamField
 - Based on the native HTML5 color picker
 - A custom db field for improved validation
-- PolyfillColorPanel for cases that require IE11 support (built on [Spectrum](https://github.com/bgrins/spectrum))
+- PolyfillColorPanel (deprecated, will be removed in 2.0.0 — use NativeColorPanel instead)
 
 
 ## Example

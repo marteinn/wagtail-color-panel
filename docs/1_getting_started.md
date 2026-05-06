@@ -3,7 +3,7 @@
 ### Requirements
 
 - Python 3.10+
-- Wagtail 6.3+ and Django 4.2+
+- Wagtail 7.0+ and Django 4.2+
 - [A browser that supports `input type="color"`](https://caniuse.com/#feat=input-color)
 
 
