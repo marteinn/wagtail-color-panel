@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 ### Removed
+- Drop support for EOL Wagtail 6.3 LTS
+- Drop support for EOL Wagtail 7.2
 
 ## [1.8.1] - 2026-04-12
 ### Fixed
